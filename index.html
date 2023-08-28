@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body id="font">
+    <header>
+
+    </header>
+
+    <main>
+        <!-- --------------------srarch_field------------------------ -->
+        <div>
+            <h3 class="font-bold text-4xl text-center my-3">Search your phone</h3>
+            <div class="text-center">
+                <input id="search-text" type="text" placeholder="Search here"
+                    class="input input-bordered w-full max-w-xs mb-3" />
+                <button onclick="searchPhone()" class="btn btn-success">Search</button>
+            </div>
+        </div>
+
+        <div id="looding-field" class="text-center my-16 hidden">
+            <span class="loading loading-spinner loading-md"></span>
+        </div>
+
+        <!-- ----------------------data_field-------------------------- -->
+        <div id="data-container"
+            class="grid justify-center justify-items-center mx-auto items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
+
+        </div>
+
+        <div id="show-all-button-container" class="text-center mb-2  hidden">
+            <button onclick="showAll()" class="btn btn-success uppercase">show all</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_1" class="modal">
+            <form method="dialog" class="modal-box">
+
+                <div id="details-container" class="pl-2 space-y-3">
+                   
+                </div>
+            </form>
+        </dialog>
+    </footer>
+
+    <!-- --------------scriptJS--------------------- -->
+    <script src="./node.js"></script>
+</body>
+
+</html>
